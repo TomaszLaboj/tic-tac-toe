@@ -1,23 +1,19 @@
 /**
  * function description: checks board state and determines if there's a winner and which player won
- * function name: calcWinState
+ * function name: checkRows
  * @param {BoardState} boardState : array of arrays
  * @returns a string 
  */
 
-type Input = ('x' | 'o' | '')
-type Row = [Input,Input,Input]
+type Square = ('x' | 'o' | '')
+type Row = [Square,Square,Square]
 type BoardState = [Row,Row,Row]
 
-function calcWinState(boardState: BoardState): string {
-let result;
 
-
-
-    return 'x wins';
+function checkWinner (boardState:BoardState):string {
+    return 'winner is'
 }
 
-export default calcWinState;
 
 function checkRows(oneRow: Row): string | undefined {
 if(oneRow.every(item => item === 'x')) {
@@ -26,4 +22,11 @@ if(oneRow.every(item => item === 'x')) {
     return 'o wins'
 }
 
+}
+
+function checkDiagonals(board:BoardState):string|undefined {
+
+    const squareOneSymbol: string = '' // should be 'x' or 'o'
+
+    return squareOneSymbol + ' wins';
 }
